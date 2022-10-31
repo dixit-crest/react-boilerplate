@@ -1,0 +1,25 @@
+@import "../../../styles/vars.scss";
+
+.input_wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.input {
+    outline: none;
+    border: none;
+    padding: .2em .4em;
+    border-radius: $input-border-radius;
+    border: 1px solid transparent;
+}
+
+.label {
+  font-size: 0.8em;
+}
+
+.error {
+    color: $danger;
+}
+.error_border {
+    border: 1px solid $danger;
+}

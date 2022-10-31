@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { useState } from "react";
 import { useEffect } from "react";
-import { Button } from "react-bootstrap";
+import Button  from "../../components/common/Button";
 import { ThemeContext } from "../../contexts/ThemeProvider";
 import { useFetch } from "../../hooks/useFetch";
 import classes from "./index.module.scss";
@@ -16,7 +16,6 @@ const HomePage = () => {
   useEffect(() => {
     if (data && !isLoading) {
       setPosts(data);
-      console.log(data);
     }
   }, [data]);
 

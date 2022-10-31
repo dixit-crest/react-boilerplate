@@ -1,7 +1,13 @@
-import { isPageAccessAllowed } from "../utils/helpers";
+// auth
 import Signin from "../views/auth/Signin";
 import Signup from "../views/auth/Signup";
+import RequestResetPassword from "../views/auth/RequestResetPassword";
+
+// home
 import HomePage from "../views/home";
+
+import { isPageAccessAllowed } from "../utils/helpers";
+import ResetPassword from "../views/auth/ResetPassword";
 
 export const publicRoutes = [
   {
@@ -13,6 +19,16 @@ export const publicRoutes = [
     title: "Sign up",
     component: Signup,
     path: "/signup",
+  },
+  {
+    title: "Reset password",
+    component: RequestResetPassword,
+    path: "/request-reset-password",
+  },
+  {
+    title: "Reset password",
+    component: ResetPassword,
+    path: "/reset-password/:token",
   },
 ];
 
