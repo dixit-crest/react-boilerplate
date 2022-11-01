@@ -1,4 +1,18 @@
 /**
+ * Check page permission for given module
+ * @param {String|Number} num - Number
+ * @param {Number} roundOff - Number to round off : Default is 2
+ * @return {Number} number - Number fixed to roundoff (12.NN)
+ */
+ module.exports.roundOff = (num, roundOff = 2) => {
+  try {
+    return parseFloat(parseFloat(num || 0).toFixed(roundOff));
+  } catch (error) {
+    return num;
+  }
+};
+
+/**
  * Check permission for given action & module
  * @param {String} moduleName - name of the module (i.e user, product, etc)
  * @param {String} action - name of the action (i.e. product_create, product_update, ect )
