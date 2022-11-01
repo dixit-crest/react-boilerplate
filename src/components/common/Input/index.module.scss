@@ -1,4 +1,4 @@
-@import "../../../styles/vars.scss";
+@import "../../../styles/variables.scss";
 
 .input_wrapper {
   display: flex;
@@ -6,11 +6,11 @@
 }
 
 .input {
-    outline: none;
-    border: none;
-    padding: .2em .4em;
-    border-radius: $input-border-radius;
-    border: 1px solid transparent;
+  outline: none;
+  border: none;
+  padding: 0.2em 0.4em;
+  border-radius: $input-border-radius;
+  border: 1px solid transparent;
 }
 
 .label {
@@ -18,8 +18,8 @@
 }
 
 .error {
-    color: $danger;
+  color: $danger;
 }
 .error_border {
-    border: 1px solid $danger;
+  border: 1px solid $danger;
 }
