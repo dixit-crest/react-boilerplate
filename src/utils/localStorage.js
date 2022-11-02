@@ -22,6 +22,6 @@ export const LocalUtils = {
   getToken: () => {
     const user = JSON.parse(localStorage.getItem(LOCAL_STORAGE_USER));
     if (!user) return null;
-    return user;
+    return user?.token;
   },
 };

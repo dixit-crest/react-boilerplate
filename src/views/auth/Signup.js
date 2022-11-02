@@ -1,9 +1,7 @@
 import React, { useState } from "react";
 import { Button, Container, Form, Row, Col } from "react-bootstrap";
 import { useForm } from "react-hook-form";
-import { useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
-import { userLoginRequest } from "../../store/auth/actions";
 import Input from "../../components/common/Input";
 import { toast } from "react-toastify";
 
@@ -11,7 +9,6 @@ import { EMAIL_REGEX, api } from "../../utils";
 const Signup = () => {
   const [isRequestLoading, setIsRequestLoading] = useState(false);
 
-  const dispatch = useDispatch();
   const navigate = useNavigate();
   const {
     register,
@@ -151,18 +148,18 @@ const Signup = () => {
                 error={errors?.password?.message}
               />
             </div>
-            <a href="/signin">
+            <Link to="/signin">
               <small className="text-muted form-text">
                 Already have an account ? Signin
               </small>
-            </a>
+            </Link>
             <div className="d-flex justify-content-end mt-4">
               <button
                 type="submit"
                 className="btn btn-primary"
                 disabled={isRequestLoading}
               >
-                Sign In
+                Sign up
               </button>
             </div>
           </form>

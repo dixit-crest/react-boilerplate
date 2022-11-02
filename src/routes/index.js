@@ -8,6 +8,7 @@ import HomePage from "../views/home";
 
 import { isPageAccessAllowed } from "../utils/helpers";
 import ResetPassword from "../views/auth/ResetPassword";
+import ListNotes from "../views/notes";
 
 export const publicRoutes = [
   {
@@ -37,6 +38,14 @@ export const getProtectedRoutes = (permissions) => [
     title: "Home Page",
     component: HomePage,
     path: "/",
+    icon: "bi bi-speedometer2",
+    isSidebarMenu: true,
+    pageAccess: isPageAccessAllowed("dashboard", permissions),
+  },
+  {
+    title: "Notes",
+    component: ListNotes,
+    path: "/notes",
     icon: "bi bi-speedometer2",
     isSidebarMenu: true,
     pageAccess: isPageAccessAllowed("dashboard", permissions),
