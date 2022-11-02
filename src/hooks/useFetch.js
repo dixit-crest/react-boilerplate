@@ -1,18 +1,20 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { REACT_APP_BACK_BASE_URL } from "../utils";
+import { REACT_APP_PLACEHOLDER_API } from "../utils";
 
+/**
+ * Instance to be used with `useFetch` hook, You could pass different baseUrl and different
+ * axios parameters ( headers, auth-tokens, ect ) here.
+ */
 const axiosIntance = axios.create({
-  // baseURL: REACT_APP_BACK_BASE_URL + "/api/v1"
-  baseURL: "https://jsonplaceholder.typicode.com",
+  baseURL: REACT_APP_PLACEHOLDER_API,
 });
 
 /**
- * api instance of axios from `/utils` is recommended for api calls since the code for logging out and passing
- * the access token is already there.  
- * 
- * @param {{url: string, method: string}} axiosParams - Params that axios accepts
+ * api instance of axios from `/utils` is recommended for api calls since the code for logging out when unauthorized 
+ * or unauthenticated and passing the access token is already there.
  *
+ * @param {{url: string, method: string}} axiosParams - Params that axios accepts
  *
  * @returns {{data: Object, error: Error, isLoading: boolean, fetchData: Function}} axiosParams - axiosParams
  */

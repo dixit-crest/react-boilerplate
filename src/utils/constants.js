@@ -11,6 +11,8 @@ export const LOCAL_STORAGE_THEME = "appname-theme";
 
 export const REACT_APP_BACK_BASE_URL = process.env.REACT_APP_BACK_BASE_URL;
 
+export const REACT_APP_PLACEHOLDER_API = process.env.REACT_APP_PLACEHOLDER_API;
+
 export const USER_TYPES = {
   SUPER_ADMIN: 1,
   ADMIN: 2,
