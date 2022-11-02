@@ -18,6 +18,13 @@ const themeReducer = (state, action) => {
   }
 };
 
+/**
+ * 
+ * @param {children} Children - React compoenets  
+ * 
+ * This context is reposible for providing theme values accross the app.
+ * You can store other utility variables and share accross the app.
+ */
 export function ThemeProvider(props) {
   const [state, dispatch] = useReducer(themeReducer, initialThemeState);
 

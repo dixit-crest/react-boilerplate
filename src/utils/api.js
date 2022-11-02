@@ -3,6 +3,10 @@ import { toast } from "react-toastify";
 import { userLogout } from "../store/auth/actions";
 import { REACT_APP_BACK_BASE_URL } from "./constants";
 import { LocalUtils } from "./localStorage";
+
+/**
+ * The `api` instance of the axios has been configured.
+ */
 export const api = axios.create({
   baseURL: REACT_APP_BACK_BASE_URL + "/api/v1/",
   headers: {

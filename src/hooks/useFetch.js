@@ -7,6 +7,15 @@ const axiosIntance = axios.create({
   baseURL: "https://jsonplaceholder.typicode.com",
 });
 
+/**
+ * api instance of axios from `/utils` is recommended for api calls since the code for logging out and passing
+ * the access token is already there.  
+ * 
+ * @param {{url: string, method: string}} axiosParams - Params that axios accepts
+ *
+ *
+ * @returns {{data: Object, error: Error, isLoading: boolean, fetchData: Function}} axiosParams - axiosParams
+ */
 export const useFetch = (axiosParams) => {
   const [data, setData] = useState(undefined);
   const [error, setError] = useState("");

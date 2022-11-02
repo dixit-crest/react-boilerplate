@@ -5,7 +5,18 @@ import {
   USER_LOGIN_SUCCESS,
 } from "./actionTypes";
 
+/**
+ * These are the function that needs to be called with dispatch instance of react-redux
+ */
+
 // LOGIN
+/**
+ *
+ * @param {{email: string, password: string}} payload - For login
+ * @param {Function} navigate - navigate function of react-router-dom
+ * @param {Function} dispatch - dispatch function of the react-redux
+ * @returns
+ */
 export const userLoginRequest = (payload, navigate, dispatch) => {
   return {
     type: USER_LOGIN_REQUEST,

@@ -1,7 +1,7 @@
 /**
  * Check page permission for given module
  * @param {String|Number} num - Number
- * @param {Number} roundOff - Number to round off : Default is 2
+ * @param {Number} [roundOff] - Number to round off : Default is 2
  * @return {Number} number - Number fixed to roundoff (12.NN)
  */
  export const roundOff = (num, roundOff = 2) => {

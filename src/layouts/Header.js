@@ -7,6 +7,12 @@ import { Link } from "react-router-dom";
 import { ThemeContext } from "../contexts/ThemeProvider";
 import { userLogout } from "../store/actions";
 
+/**
+ * 
+ * @param {Boolean} isAuthenticated - Indicates the type of header to be shown, If true then all the links
+ * will be visible and hidden otherwise
+ *  
+ */
 function Header({ isAuthenticated = false }) {
   const { state } = useContext(ThemeContext);
   return (

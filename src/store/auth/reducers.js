@@ -16,6 +16,13 @@ const initialState = {
   error: null,
 };
 
+/**
+ * Reducers are the functions that modifies the state according to `type` of action they get
+ * 
+ * @param {Object} state - initialState as given above
+ * @param {{type: string, payload: any}} action - Object returned by action methods
+ */
+
 function authReducer(state = initialState, { type, payload }) {
   switch (type) {
     case USER_LOGIN_SUCCESS:

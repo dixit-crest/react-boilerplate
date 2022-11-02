@@ -1,4 +1,12 @@
+/**
+ * With this name we store user object in local storage, replace `appname` with the project name
+ * to avoid conflict with other variable in browser
+ */
 export const LOCAL_STORAGE_USER = "appname-user";
+/**
+ * With this name we store theme object in local storage, replace `appname` with the project name
+ * to avoid conflict with other variable in browser
+ */
 export const LOCAL_STORAGE_THEME = "appname-theme";
 
 export const REACT_APP_BACK_BASE_URL = process.env.REACT_APP_BACK_BASE_URL;
