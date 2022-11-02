@@ -67,14 +67,9 @@ function Header({ isAuthenticated = false }) {
               {isAuthenticated && (
                 <>
                   <li className="nav-item">
-                    <a className="nav-link active" aria-current="page" href="#">
+                    <Link to="/" className="nav-link active" aria-current="page" href="#">
                       Home
-                    </a>
-                  </li>
-                  <li className="nav-item">
-                    <a className="nav-link" href="#">
-                      Features
-                    </a>
+                    </Link>
                   </li>
                 </>
               )}

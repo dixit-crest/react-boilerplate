@@ -32,9 +32,7 @@ const HomePage = () => {
 
   return (
     <div
-      className={`${classes.container} ${
-        state.darkMode ? "bg-dark" : "bg-light"
-      }`}
+      className={classes.container}
     >
       <h2 className={state.darkMode ? "text-white" : "text-dark"}>
         Welcome to home

@@ -97,7 +97,7 @@ const ListNotes = () => {
   };
 
   return (
-    <div className="row align-items-start w-100 p-4">
+    <div className="row align-items-start w-100 p-lg-4 mx-0 p-sm-3">
       <div className="col-12 col-sm-6">
         {notes.length === 0 ? (
           <div className="d-flex p-5 justify-content-center align-items-center bg-white mt-5">

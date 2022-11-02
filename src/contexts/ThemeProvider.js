@@ -1,12 +1,17 @@
 import { createContext, useReducer } from "react";
+import { LocalUtils } from "../utils";
 
-const initialState = { darkMode: false };
-
+export const initialThemeState = {
+  darkMode: false,
+  ...LocalUtils.getThemeData(),
+};
 const themeReducer = (state, action) => {
   switch (action.type) {
     case "LIGHTMODE":
+      LocalUtils.setThemeData({ darkMode: false });
       return { darkMode: false };
     case "DARKMODE":
+      LocalUtils.setThemeData({ darkMode: true });
       return { darkMode: true };
     default:
       return state;
@@ -14,7 +19,7 @@ const themeReducer = (state, action) => {
 };
 
 export function ThemeProvider(props) {
-  const [state, dispatch] = useReducer(themeReducer, initialState);
+  const [state, dispatch] = useReducer(themeReducer, initialThemeState);
 
   return (
     <ThemeContext.Provider value={{ state: state, dispatch: dispatch }}>
@@ -22,6 +27,5 @@ export function ThemeProvider(props) {
     </ThemeContext.Provider>
   );
 }
-
 
 export const ThemeContext = createContext();
